@@ -1,0 +1,38 @@
+/** @format */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.item:nth-child(2n) {
+  display: flex;
+  flex-direction: row-reverse;
+  color: white;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  border: #8fb4916b 1px solid;
+  padding: 10px;
+}
+.view {
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #35b63d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(179, 165, 165, 0.2);
+  outline: none;
+  border: none;
+  &:hover {
+    background-color: #399e33;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

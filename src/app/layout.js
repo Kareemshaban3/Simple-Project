@@ -1,5 +1,11 @@
+/** @format */
+
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
+import { ThemModeProvider } from "@/context/ThemMode";
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,9 +25,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <ThemModeProvider>
+          <div className='container'>
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </ThemModeProvider>
       </body>
     </html>
   );

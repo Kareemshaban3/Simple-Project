@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+.display{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;    
+}
+.button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #35b63d;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover{
+    background-color: #399e33;
+}
+.button:active{
+    transform: scale(0.95);
+}
+
+
